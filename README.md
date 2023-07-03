@@ -7,7 +7,11 @@
   
 ## Query index
 - query the created indexes with search_index.py
-- run in command line with python search_index.py to experiment
+'''
+python search_index.py
+'''
 
 ## Webapp
-- python app.py 
+'''
+python app.py
+'''
