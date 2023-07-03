@@ -11,7 +11,6 @@ model = SentenceTransformer(model_name)
 
 # Load the Faiss index from this location
 dindex = faiss.read_index('index.faiss')  
-print(dindex)
 
 # Load word index from this location
 with open(f'words.pkl', "rb") as fIn:

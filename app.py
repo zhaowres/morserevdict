@@ -2,22 +2,17 @@ import pickle
 from flask import Flask, render_template, request
 from sentence_transformers import SentenceTransformer, util
 import json
-import numpy as np
-# import torch
-import os
 import faiss
 import time
 
 app = Flask(__name__)
 
-# torch.cuda.empty_cache()
 # other models: all-mpnet-base-v2 multi-qa-mpnet-base-dot-v1  all-distilroberta-v1 all-MiniLM-L12-v2 multi-qa-distilbert-cos-v1 all-MiniLM-L6-v2
 model_name = 'multi-qa-mpnet-base-dot-v1'
 model = SentenceTransformer(model_name)
 
 # Load the Faiss index
 dindex = faiss.read_index('index.faiss')  # Replace 'index.faiss' with the path to your saved Faiss index
-print(dindex)
 
 # Load word index
 with open(f'words.pkl', "rb") as fIn:
