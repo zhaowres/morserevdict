@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Dictionary with Semantic Similarity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            padding: 10px;
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .results {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .result-item {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .result-item h3 {
+            margin-top: 0;
+        }
+
+        .result-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1><align="left">Reverse Dictionary with Semantic Similarity</h1>
+    <div class="search-container">
+        <form action="/" method="post">
+            <input type="text" name="query" class="search-bar" placeholder="Enter your query">
+            <input type="submit" value="Search" class="search-button">
+        </form>
+    </div>
+
+    {% if results %}
+    <h2><center>Query: {{ query }}</center></h2>
+        <div class="results">
+            {% for rank, word, distance in results %}
+                <div class="result-item">
+                    <h3><center>{{ word }}</center></h3>
+                    <p>Rank: {{ rank }}</p>
+                    <p>Distance: {{ distance }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</body>
+</html>
+
