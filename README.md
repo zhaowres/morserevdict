@@ -6,7 +6,7 @@
 - create pickle word index with pickle_data.py
   
 ## Query index
-Cuery the created indexes with search_index.py in command line
+Query the created indexes with search_index.py in command line
 ```
 python search_index.py
 ```
