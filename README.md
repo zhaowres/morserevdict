@@ -7,11 +7,11 @@
   
 ## Query index
 - query the created indexes with search_index.py
-'''
+```
 python search_index.py
-'''
+```
 
 ## Webapp
-'''
+```
 python app.py
-'''
+```
