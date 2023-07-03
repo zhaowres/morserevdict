@@ -1,5 +1,13 @@
-# Reverse Dictionary with semantic search
+# Reverse dictionary with semantic search
 
-Create index with dictionary data file: https://drive.google.com/file/d/1XbiQJidncJmvhr-hm9ai_9zNJ6J75i9g/view?usp=sharing
+## First create indexes
+- 900k dictionary definition-word dataset: filehttps://drive.google.com/file/d/1XbiQJidncJmvhr-hm9ai_9zNJ6J75i9g/view?usp=sharing
+- create FAISS index with create_faiss_embeddings.py
+- create pickle word index with pickle_data.py
+  
+## Query index
+- query the created indexes with search_index.py
+- run in command line with python search_index.py to experiment
 
-Query index with search .py.
+## Webapp
+- python app.py 
